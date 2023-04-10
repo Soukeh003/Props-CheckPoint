@@ -1,7 +1,9 @@
 import React from 'react'
 import profilepic from "../img/profilepic.webp"
+
 const ChildrenComp = () => {
-    const styleImage= {width: 350}
+  const styleImage= {width: 350}
+
   return (
     <div>
         <h1>My Profile PIC</h1>

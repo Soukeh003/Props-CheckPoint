@@ -1,6 +1,10 @@
 import React from 'react'
+import profilepic from "../img/profilepic.webp"
+import PropTypes from "prop-types"
 
-const profile = ({FullName, Bio, Profession, children}) => {
+const styleImage= {width: 350}
+
+const Profile = ({FullName, Bio, Profession, children}) => {
   return (
     <div>
         <h1>FullName: {FullName}</h1>
@@ -13,4 +17,22 @@ const profile = ({FullName, Bio, Profession, children}) => {
   )
 }
 
-export default profile
+Profile.defaultProps ={
+  FullName:"Unknown" ,
+  Bio:"Unknown" ,
+  Profession:"Unknown",
+  children:
+    <div>
+      <h2>My profile PIC</h2>
+      <img style={styleImage} src={profilepic} alt=''/>
+    </div>
+}
+
+Profile.propTypes={
+  FullName:PropTypes.oneOf(["Ahmed Soukeh" , "Selim Daoud"]),
+  Bio:PropTypes.oneOfType([
+    PropTypes.string,
+  ])
+}
+
+export default Profile

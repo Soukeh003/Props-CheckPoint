@@ -6,9 +6,10 @@ function App() {
   const styleImage= {width: 350}
   return (
     <div className="App">
-      <Profile FullName="Ahmed Soukeh" Bio="Student" Profession="Full Stack Web Developper">
+      <Profile styleImage={styleImage} FullName="Ahmed Soukeh" Bio="Student" Profession="Full Stack Web Developper">
         <ChildrenComp styleImage={styleImage}/>
       </Profile>
+      <Profile FullName="Selim Daoud"/>
     </div>
   )
 }
